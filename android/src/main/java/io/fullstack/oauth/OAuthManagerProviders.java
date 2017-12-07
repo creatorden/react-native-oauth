@@ -264,8 +264,8 @@ public class OAuthManagerProviders {
     String scopes = "";
     if (cfg.containsKey("scopes")) {
       scopes = (String) cfg.get("scopes");
-      String scopeStr = OAuthManagerProviders.getScopeString(scopes, " ");
-      builder.scope(scopeStr);
+//      String scopeStr = OAuthManagerProviders.getScopeString(scopes, " ");
+      builder.scope(scopes);
     }
 
     boolean rawScopes = (cfg.containsKey("rawScopes") && ((String)cfg.get("rawScopes")).equalsIgnoreCase("true"));
@@ -279,7 +279,7 @@ public class OAuthManagerProviders {
       else
         scopeStr = scopes;
 
-      builder.scope(scopeStr);
+      builder.scope(scopes);
     } 
 
     if (callbackUrl != null) {
