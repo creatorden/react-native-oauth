@@ -209,11 +209,11 @@ public class OAuthManagerDialogFragment extends DialogFragment implements Advanc
 
           if (isCallbackUri(url, mController.getCallbackUrl())) {
             mController.getAccessToken(mWebView, url);
-            return true;
+            return false;
           }
 
           if (loadUrl) {
-            view.loadUrl(url);
+//            view.loadUrl(url);
           }
 
           return false;
